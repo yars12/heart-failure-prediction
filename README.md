@@ -37,7 +37,7 @@ This project uses machine learning to predict the risk of heart failure based on
 ---
 
 ## 📊 Results
-- Accuracy: (add your result later, even if ~80%)  
+- Accuracy: 0.82  
 
 ---
 
