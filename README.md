@@ -4,7 +4,7 @@ A machine learning classification project that predicts the **AHD (heart disease
 
 ## Project Overview
 
-This notebook works with a heart-disease dataset containing **303 patient records**. The workflow prepares numeric and categorical features, trains a Logistic Regression model, and evaluates performance on unseen test data.
+This project works with a heart-disease dataset containing **303 patient records**. The workflow prepares numeric and categorical features, trains a Logistic Regression model, and evaluates performance on unseen test data.
 
 > **Note:** This is an educational machine learning project and is not intended for medical diagnosis.
 
@@ -47,10 +47,11 @@ The model correctly identified 26 positive cases in the test set while missing 2
 - Scikit-learn
 - Jupyter / Google Colab
 
-## Repository Files
+## Repository Structure
 
-- `Lab_27_Heart_Disease.ipynb` — complete preprocessing, training, and evaluation workflow
+- `heart_disease_prediction.ipynb` — complete preprocessing, training, and evaluation workflow
 - `requirements.txt` — Python dependencies
+- `.gitignore` — common local and notebook-generated files
 
 The notebook expects a file named `Heart.csv`. The dataset is not currently included in this repository.
 
@@ -61,7 +62,7 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-Then open `Lab_27_Heart_Disease.ipynb` and make sure `Heart.csv` is available in the working directory.
+Then open `heart_disease_prediction.ipynb` and make sure `Heart.csv` is available in the working directory.
 
 ## Skills Demonstrated
 
