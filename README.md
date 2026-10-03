@@ -1,69 +1,62 @@
-# Heart Disease Prediction with Logistic Regression
+# Heart Failure Mortality Prediction
 
-A machine learning classification project that predicts the **AHD (heart disease) outcome** from patient health features using a reproducible Scikit-learn pipeline.
+An end-to-end machine learning classification project that predicts the **DEATH_EVENT** outcome from clinical heart-failure records.
 
-## Project Overview
+This project was developed from my machine learning final project and demonstrates exploratory analysis, model comparison, hyperparameter tuning, evaluation, and feature interpretation.
 
-This project works with a heart-disease dataset containing **303 patient records**. The workflow prepares numeric and categorical features, trains a Logistic Regression model, and evaluates performance on unseen test data.
+> Educational project only. It is not intended for medical diagnosis or clinical decision-making.
 
-> **Note:** This is an educational machine learning project and is not intended for medical diagnosis.
+## Project Highlights
 
-## What I Built
+- Worked with **299 patient records and 12 clinical features**
+- Compared 7 classification approaches
+- Used stratified train/test splitting for a consistent class balance
+- Tuned Random Forest and SVM with `RandomizedSearchCV`
+- Evaluated models using Accuracy, Precision, Recall, F1, ROC-AUC, and confusion matrices
+- Used Random Forest feature importance and permutation importance for interpretation
 
-- Converted the target variable `AHD` into a binary classification label
-- Handled missing values with Scikit-learn imputers
-- Standardized numeric features with `StandardScaler`
-- One-hot encoded categorical features
-- Used an **80/20 stratified train-test split**
-- Built an end-to-end `Pipeline` with Logistic Regression
-- Evaluated the model with accuracy, precision, recall, F1 score, ROC-AUC, and a confusion matrix
+## Models Compared
 
-## Model Performance
+- Logistic Regression
+- Gaussian Naive Bayes
+- K-Nearest Neighbors
+- Support Vector Machine
+- Decision Tree
+- Random Forest
+- Gradient Boosting
 
-### Test Set
+## Best Model
+
+The tuned Random Forest produced the strongest ROC-AUC in the completed notebook run.
 
 | Metric | Score |
 |---|---:|
-| Accuracy | 0.885 |
-| Precision | 0.839 |
-| Recall | 0.929 |
-| F1 Score | 0.881 |
-| ROC-AUC | 0.960 |
+| Accuracy | 0.833 |
+| Precision | 0.846 |
+| Recall | 0.579 |
+| F1 Score | 0.688 |
+| ROC-AUC | 0.906 |
 
-**Confusion matrix**
-
-```text
-[[28  5]
- [ 2 26]]
-```
-
-The model correctly identified 26 positive cases in the test set while missing 2 positive cases.
+The baseline Random Forest was also competitive, with ROC-AUC of approximately **0.892**.
 
 ## Technologies
 
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Jupyter / Google Colab
+Python · Pandas · NumPy · Scikit-learn · Matplotlib · Seaborn
 
-## Repository Structure
+## Repository Files
 
-- `heart_disease_prediction.ipynb` — complete preprocessing, training, and evaluation workflow
+- `heart_failure_mortality_prediction.py` — cleaned project workflow
 - `requirements.txt` — Python dependencies
-- `.gitignore` — common local and notebook-generated files
 
-The notebook expects a file named `Heart.csv`. The dataset is not currently included in this repository.
+The script expects a dataset named `heart_failure.csv`.
 
-## Run Locally
+## Run
 
 ```bash
 pip install -r requirements.txt
-jupyter notebook
+python heart_failure_mortality_prediction.py
 ```
-
-Then open `heart_disease_prediction.ipynb` and make sure `Heart.csv` is available in the working directory.
 
 ## Skills Demonstrated
 
-Machine Learning · Classification · Logistic Regression · Data Preprocessing · Feature Encoding · Model Evaluation · Scikit-learn · Python
+Machine Learning · Classification · Model Comparison · Hyperparameter Tuning · ROC-AUC · Feature Importance · Data Visualization · Python
